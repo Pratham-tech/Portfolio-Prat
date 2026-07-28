@@ -2,7 +2,7 @@
 
 > I enjoy breaking complicated problems into smaller pieces until they're understandable. Whether that's building software, analysing data, or improving a process, that's usually where I find the work most rewarding.
 
-[Live Website] • [linkedin.com/in/pratham-dang] 
+[https://pratham-dang.vercel.app] • [linkedin.com/in/pratham-dang] 
 
 ---
 
