@@ -60,4 +60,4 @@ I also really like following a variety of sports!
 
 ---
 
-Built with ☕, too many browser tabs, and a habit of turning random ideas into side projects.
+Built with ☕, curiosity, and a habit of turning random ideas into side projects :)
