@@ -1,129 +1,63 @@
-# Pratham Dang — Personal Portfolio
+# Pratham Dang- Portfolio Website
 
-A personal portfolio website built with **Next.js 14**, **Tailwind CSS**, and **Supabase** — designed to communicate technical skills and projects clearly to recruiters and hiring managers.
+> I enjoy breaking complicated problems into smaller pieces until they're understandable. Whether that's building software, analysing data, or improving a process, that's usually where I find the work most rewarding.
+
+[Live Website] • [linkedin.com/in/pratham-dang] 
+
+---
+
+## Why I Built This
+
+As I've worked on more projects, I've realised the interesting part isn't the final result— it's the thinking behind it. That's what I wanted this portfolio to capture.
+
+Every project teaches me something different. Sometimes it's a new framework, sometimes it's a better way to structure code, and sometimes it's discovering that the first idea wasn't the right one after all. I wanted a place that reflects that process rather than just showing the finished result.
+
+I'm studying Computational Data Science and Business Analytics at the University of Sydney, and I'm particularly interested in building software that solves practical problems with data. Lately that's meant exploring machine learning, full-stack development, geospatial analysis and applications of LLMs—mostly because I enjoy figuring out how things work and then building something with them.
+
+---
 
 ## Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
-| Framework | Next.js 14 (App Router) |
-| Styling | Tailwind CSS v3 |
-| Animations | CSS + Intersection Observer |
-| Contact Form | Supabase (PostgreSQL) |
+| Area | Technologies |
+|------|--------------|
+| Frontend | Next.js, React, TypeScript |
+| Styling | Tailwind CSS |
+| Animations | Framer Motion |
 | Deployment | Vercel |
-| Fonts | Syne (display) · DM Sans (body) · DM Mono (code) |
 
-## Design System
+---
 
-| Token | Value |
-|-------|-------|
-| Background | `#0B0E14` (Deep Obsidian) |
-| Card surfaces | `#161B22` (Graphite Layer) |
-| Primary accent | `#00BAC2` (Deep Cyan) |
-| Complementary | `#0AFF99` (Electric Seafoam) |
-| Typography | `#E6EDF3` (Vapor White) |
-
-## Getting Started
-
-### 1. Install dependencies
+## Running Locally
 
 ```bash
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+
 npm install
-```
-
-### 2. Set up Supabase
-
-Create a project at [supabase.com](https://supabase.com), then run this SQL in the Supabase SQL editor:
-
-```sql
-create table contact_messages (
-  id uuid default gen_random_uuid() primary key,
-  name text not null,
-  email text not null,
-  message text not null,
-  created_at timestamptz default now()
-);
-
--- Optional: enable Row Level Security
-alter table contact_messages enable row level security;
-
--- Allow inserts from anonymous users (for the contact form)
-create policy "Allow anonymous inserts" on contact_messages
-  for insert with check (true);
-```
-
-### 3. Configure environment variables
-
-Copy `.env.example` to `.env.local` and fill in your Supabase credentials:
-
-```bash
-cp .env.example .env.local
-```
-
-```env
-NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
-SUPABASE_SERVICE_ROLE_KEY=your-service-role-key   # optional, for server-side ops
-```
-
-### 4. Run locally
-
-```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+---
 
-## Project Structure
+## What's Next
 
-```
-portfolio/
-├── app/
-│   ├── layout.tsx          # Root layout + metadata
-│   ├── page.tsx            # Main page assembling all sections
-│   ├── globals.css         # Global styles, animations, utilities
-│   └── api/
-│       └── contact/
-│           └── route.ts    # Contact form API endpoint (Supabase)
-├── components/
-│   ├── Navbar.tsx          # Sticky navbar with active section tracking
-│   ├── Hero.tsx            # Landing hero with animated skill tags
-│   ├── About.tsx           # Bio + skills grid
-│   ├── Experience.tsx      # Timeline of roles + volunteering
-│   ├── Projects.tsx        # Detailed project cards
-│   ├── Achievements.tsx    # Awards, certifications, competitions
-│   ├── Contact.tsx         # Contact form + social links
-│   ├── Footer.tsx          # Minimal footer
-│   └── ScrollObserver.tsx  # Intersection Observer for scroll animations
-├── .env.example            # Environment variable template
-├── tailwind.config.js      # Custom design tokens
-└── next.config.js
-```
+Some things I'd like to add over time:
 
-## Deployment to Vercel
+- Project case studies that explain the decisions behind each build
+- Engineering notes and things I've learnt
+- Interactive demos for selected projects
+- Better filtering and search across projects
 
-1. Push this repo to GitHub
-2. Import into [vercel.com](https://vercel.com)
-3. Add environment variables in the Vercel dashboard (Settings → Environment Variables)
-4. Deploy — Vercel auto-detects Next.js
+---
 
-## Personalisation Checklist
+## A Little About Me
 
-Before going live, update the following:
+Outside of university, I spend a lot of time building projects simply because I enjoy the process. I'm usually experimenting with a new API, reading documentation I probably didn't need to read, or trying to understand how a system works under the hood.
 
-- [ ] Replace `YOUR_PHONE_NUMBER` in `Contact.tsx` if you want to add a phone number
-- [ ] Update GitHub repo links in `Projects.tsx` once projects are published
-- [ ] Add a real profile photo (place in `/public/avatar.jpg` and update `Hero.tsx`)
-- [ ] Set up Supabase table and add `.env.local` credentials
-- [ ] Add `NEXT_PUBLIC_SUPABASE_URL` and keys to Vercel environment variables
+I'm always looking for opportunities to build things that are genuinely useful, learn from people who are better than me, and keep improving one project at a time.
 
-## Sections
+I also really like following a variety of sports!
 
-| # | Section | Purpose |
-|---|---------|---------|
-| 01 | Hero | First impression — name, title, value statement, CTAs |
-| 02 | About | Bio, academic background, skills grid |
-| 03 | Experience | Timeline: mentoring, robotics club, GIIS Tech Club |
-| 04 | Projects | Stock prediction, churn prediction, robotics competition |
-| 05 | Achievements | Awards, scholarships, certifications |
-| 06 | Contact | Form (Supabase) + social links |
+---
+
+Built with ☕, too many browser tabs, and a habit of turning random ideas into side projects.
